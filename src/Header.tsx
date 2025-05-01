@@ -7,16 +7,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ headerItems }) => {
   return (
     <div className="container">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          textAlign: "center",
-          width: "100%",
-          position: "absolute",
-          top: 0,
-          left: 0
-        }}
+      <div className="header-container"
       >
         {headerItems.map((val, idx) => {
           return (

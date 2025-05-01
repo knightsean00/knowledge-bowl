@@ -3,6 +3,7 @@ import UpcomingEvents from "./Events";
 import { HeaderItemArray, EventArray } from "./Types";
 import Footer from "./Footer";
 import kb_demo from "./images/kb_demo.jpg";
+import { DateTime } from "luxon";
 
 const headerItems: HeaderItemArray = [
   {
@@ -20,23 +21,23 @@ const headerItems: HeaderItemArray = [
 ];
 
 let upcomingEvents: EventArray = [
-  {
-    name: "Fabal Beerhall",
-    date: new Date(2025, 3, 24),
-    description:
-      "Second event! fwoiefjweofijweoifjwefoiwjf weojwefije iejfiejf fjiejieifeijfiej fiejf wef weif wiejfiwejfwjefjiji wefi weif wiejfi wejif wjei wiejfi",
-    url: "www.google.com",
-    image:
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
-  },
-  {
-    name: "Fabal Beerhall",
-    date: new Date(2025, 3, 23),
-    description: "First event!",
-    url: "www.google.com",
-    image:
-      "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
-  },
+  // {
+  //   name: "Fabal Beerhall",
+  //   date: DateTime.local(2025, 5, 22),
+  //   description:
+  //     "Second event! fwoiefjweofijweoifjwefoiwjf weojwefije iejfiejf fjiejieifeijfiej fiejf wef weif wiejfiwejfwjefjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfi",
+  //   url: "www.google.com",
+  //   image:
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
+  // },
+  // {
+  //   name: "Fabal Beerhall",
+  //   date: DateTime.local(2025, 5, 21),
+  //   description: "First eent!",
+  //   url: "www.google.com",
+  //   image:
+  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
+  // },
 ];
 
 upcomingEvents.sort((a, b) => {
@@ -46,7 +47,7 @@ upcomingEvents.sort((a, b) => {
   return a.date > b.date ? 1 : -1;
 });
 upcomingEvents = upcomingEvents.filter(
-  (val) => val.date.getTime() >= Date.now()
+  (val) => val.date >= DateTime.now()
 );
 function Home() {
   return (
@@ -103,6 +104,9 @@ function Home() {
           <a href="https://github.com/knightsean00/open-knowledge-bowl">here</a>
           !
         </p>
+      </div>
+      <div className="container">
+        <div className="divider" style={{ marginBottom: "2rem" }} />
       </div>
       <UpcomingEvents eventItems={upcomingEvents} />
       <Footer />

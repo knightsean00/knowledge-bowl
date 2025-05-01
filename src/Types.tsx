@@ -1,6 +1,8 @@
+import { DateTime } from "luxon";
+
 export type Event = {
   name: string;
-  date: Date;
+  date: DateTime;
   description: string;
   url: string;
   image: string;
