@@ -21,23 +21,15 @@ const headerItems: HeaderItemArray = [
 ];
 
 let upcomingEvents: EventArray = [
-  // {
-  //   name: "Fabal Beerhall",
-  //   date: DateTime.local(2025, 5, 22),
-  //   description:
-  //     "Second event! fwoiefjweofijweoifjwefoiwjf weojwefije iejfiejf fjiejieifeijfiej fiejf wef weif wiejfiwejfwjefjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfifjiji wefi weif wiejfi wejif wjei wiejfi",
-  //   url: "www.google.com",
-  //   image:
-  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
-  // },
-  // {
-  //   name: "Fabal Beerhall",
-  //   date: DateTime.local(2025, 5, 21),
-  //   description: "First eent!",
-  //   url: "www.google.com",
-  //   image:
-  //     "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Store_Facade_Straight-On_CROP_Fo.width-1600.format-webp.webp",
-  // },
+  {
+    name: "Fabal Beerhall",
+    date: DateTime.local(2025, 6, 15),
+    description:
+      "Our first Knowledge Bowl event in London! Come check us out at Fabal Beerhall!",
+    url: "https://www.eventbrite.com/e/1st-knowledge-bowl-at-fabal-beerhall-tickets-1381176900289?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl",
+    image:
+      "fabal.jpg",
+  },
 ];
 
 upcomingEvents.sort((a, b) => {
